@@ -21,6 +21,7 @@ public class Interactor : MonoBehaviour
         {
             Debug.Log("Es Interactivo");
             objectoDet=collision.gameObject.GetComponent<IInteractivo>();
+            objectoDet.Interact();
         }
         else
         {

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   nombreItem: manzana
   valor: 10
-  sonidoItem: {fileID: 0}
-  prefabItem: {fileID: 0}
+  sonidoItem: {fileID: 8300000, guid: 78111b1fe52f0484fb07af9f7b42c0c3, type: 3}
+  prefabItem: {fileID: 4529054621185460150, guid: fda4aeba06837784992476246ace5f1e, type: 3}
+  tipo: 0
