@@ -7,9 +7,8 @@ public class Moneda : MonoBehaviour, IInteractivo
     public void Interact()
     {
         Debug.Log("Recogiste Item:");
+        AudioSource.PlayClipAtPoint(scriptableDatos.sonidoItem,transform.position);
         Destroy(gameObject);
-        AudioSource au= new AudioSource();
-        au.PlayOneShot(scriptableDatos.sonidoItem);
         
     }
 }
