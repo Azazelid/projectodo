@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011d096fc4006b5458a2176de211ce2c, type: 3}
-  m_Name: Manzana
+  m_Name: moneda
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  nombreItem: manzana
-  valor: 30
-  sonidoItem: {fileID: 8300000, guid: 461dab1437c590a45946a3067c4ddc48, type: 3}
-  prefabItem: {fileID: 2622493845351294035, guid: b18fc074528e8e34482aa49dc32edfbc, type: 3}
-  tipo: 3
+  nombreItem: moneda
+  valor: 10
+  sonidoItem: {fileID: 8300000, guid: 78111b1fe52f0484fb07af9f7b42c0c3, type: 3}
+  prefabItem: {fileID: 2622493845351294035, guid: e050da11256b487479946f375641de3d, type: 3}
+  tipo: 0
