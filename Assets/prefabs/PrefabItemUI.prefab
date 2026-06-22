@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2284311492109669121}
         m_TargetAssemblyTypeName: SlotInventarioUI, Assembly-CSharp
         m_MethodName: VenderItem
         m_Mode: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2284311492109669121}
         m_TargetAssemblyTypeName: SlotInventarioUI, Assembly-CSharp
         m_MethodName: UsarItem
         m_Mode: 1
