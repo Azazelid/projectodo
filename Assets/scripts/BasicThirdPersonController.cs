@@ -35,11 +35,13 @@ public class BasicThirdPersonController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
+        if(!PlayerStateMachine.Instance.CanMove()) return;
         moveInput = value.Get<Vector2>();
     }
 
     public void OnJump(InputValue value)
     {
+        if(!PlayerStateMachine.Instance.CanMove()) return;
         if (!value.isPressed) return;
 
         if (controller.isGrounded)

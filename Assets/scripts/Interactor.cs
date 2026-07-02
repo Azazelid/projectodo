@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
@@ -12,8 +13,33 @@ public class Interactor : MonoBehaviour
         }
         else
         {
-            Debug.Log("No es interactivo");
+            //Debug.Log("No es interactivo");
         }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+        {
+            objectoDet = interactivo;
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+        {
+            objectoDet = null;
+        }
+    }
+
+    public void OnInteract(InputValue Value)
+    {
+        if(!Value.isPressed)
+        return;
+        if(!PlayerStateMachine.Instance.CanInteract())
+        return;
+        objectoDet?.Interact();
     }
 
 }
