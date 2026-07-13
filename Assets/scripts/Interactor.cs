@@ -3,43 +3,38 @@ using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
-    IInteractivo objectoDet;
+    IInteractivo objetoDet;
+    [SerializeField] GameObject panelTxt;
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.TryGetComponent<IInteractivo>(out objectoDet))
+        if (collision.gameObject.TryGetComponent<IInteractivo>(out objetoDet))
         {
             Debug.Log("Es Interactivo");
-            objectoDet.Interact();
-        }
-        else
-        {
-            //Debug.Log("No es interactivo");
+            objetoDet.Interact();
         }
     }
-
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
         {
-            objectoDet = interactivo;
+        objetoDet = interactivo;
+        panelTxt.SetActive(true);
         }
     }
-
     void OnCollisionExit(Collision other)
     {
         if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
         {
-            objectoDet = null;
+        objetoDet = null;
+        panelTxt.SetActive(false);
         }
     }
-
-    public void OnInteract(InputValue Value)
+    public void OnInteract(InputValue value)
     {
-        if(!Value.isPressed)
+    if(!value.isPressed)
         return;
-        if(!PlayerStateMachine.Instance.CanInteract())
+    if(!PlayerStateMachine.Instance.CanInteract())
         return;
-        objectoDet?.Interact();
+    objetoDet?.Interact();
     }
-
 }
