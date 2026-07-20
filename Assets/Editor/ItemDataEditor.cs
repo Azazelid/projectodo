@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ItemData))]
+//[CustomEditor(typeof(ItemData))]
 public class ItemDataEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -87,5 +87,11 @@ public class ItemDataEditor : Editor
         {
             EditorUtility.SetDirty(item);
         }
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("Rareza Item", EditorStyles.whiteLabel);
+
+
     }
 }
